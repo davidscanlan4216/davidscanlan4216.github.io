@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KETO Slurry Impeller Types</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        model-viewer {
+            width: 600px;
+            height: 600px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 3D Model Viewer -->
+    <model-viewer id="modelViewer" src="IMP.GLB" alt="3D Model of Impeller" auto-rotate camera-controls></model-viewer>
+    
+    <!-- Buttons to switch models -->
+    <div>
+	<button onclick="changeModel('IMP.GLB')">View IMP</button>
+        <button onclick="changeModel('KHEE.GLB')">View KHEE</button>
+        <button onclick="changeModel('KHES.GLB')">View KHES</button>
+    </div>
+
+    <script>
+        function changeModel(modelSrc) {
+            // Get the model viewer element
+            const modelViewer = document.getElementById('modelViewer');
+            
+            // Change the 'src' attribute to the new model file
+            modelViewer.src = modelSrc;
+        }
+    </script>
+
+</body>
+</html>
